@@ -7,4 +7,10 @@ class FlatsTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Flats"
     # more testing for specific content, eg. flat name, count etc.
   end
+
+  test 'visiting the first flat page' do
+    visit "/flats/145"
+
+    assert_selector 'h1', text: 'Charm at the Steps of the Sacre Coeur/Montmartre'
+  end
 end
